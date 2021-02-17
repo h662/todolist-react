@@ -19,14 +19,19 @@ const App = () => {
   };
 
   return (
-    <>
-      <CreateTodo createTodolist={createTodo} />
-      <Todolist
-        todolist={todolist}
-        onClickUpdate={onClickUpdate}
-        onClickDelete={onClickDelete}
-      />
-    </>
+    <div className="min-h-screen bg-white flex justify-center items-center">
+      <div className="bg-green-300 p-8">
+        <div className="text-4xl text-center py-4 text-green-700">
+          To do list
+        </div>
+        <CreateTodo createTodo={createTodo} />
+        <Todolist
+          todolist={todolist}
+          onClickUpdate={onClickUpdate}
+          onClickDelete={onClickDelete}
+        />
+      </div>
+    </div>
   );
 };
 

@@ -5,11 +5,11 @@ import Todo from "./Todo";
 const Todolist = ({ todolist, onClickUpdate, onClickDelete }) => {
   return (
     <>
-      <ol>
+      <ul className="py-4">
         {todolist &&
           todolist.map((v, i) => {
             return (
-              <li key={v + i}>
+              <li key={v + i} className="flex justify-between items-center p-1">
                 <Todo
                   v={v}
                   i={i}
@@ -19,7 +19,7 @@ const Todolist = ({ todolist, onClickUpdate, onClickDelete }) => {
               </li>
             );
           })}
-      </ol>
+      </ul>
     </>
   );
 };

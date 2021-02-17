@@ -28,12 +28,14 @@ const Todo = ({ v, i, onClickUpdate, onClickDelete }) => {
         </>
       ) : (
         <>
-          {v}
-          <UpdateCancelButton
-            onClickUpdateToggle={onClickUpdateToggle}
-            buttonName="Update"
-          />
-          <DeleteTodo deleteIndex={i} onClickDelete={onClickDelete} />
+          <div className="mx-4">{v}</div>
+          <div>
+            <UpdateCancelButton
+              onClickUpdateToggle={onClickUpdateToggle}
+              buttonName="Update"
+            />
+            <DeleteTodo deleteIndex={i} onClickDelete={onClickDelete} />
+          </div>
         </>
       )}
     </>

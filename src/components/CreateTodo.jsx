@@ -9,17 +9,29 @@ const CreateTodo = ({ createTodo }) => {
 
   const onSubmitCreate = (e) => {
     e.preventDefault();
-    createTodo(todo);
-    setTodo("");
+    if (todo) {
+      createTodo(todo);
+      setTodo("");
+    }
   };
 
   return (
-    <>
+    <div className="py-2">
       <form onSubmit={onSubmitCreate}>
-        <input type="text" value={todo} onChange={onChangeCreate} />
-        <input type="submit" value="Create" />
+        <input
+          className="mx-2 bg-green-100 p-2 focus:outline-none focus:ring-2 focus:ring-green-600 "
+          type="text"
+          value={todo}
+          onChange={onChangeCreate}
+          placeholder="Write here"
+        />
+        <input
+          className="bg-yellow-100 p-2 focus:outline-none"
+          type="submit"
+          value="Create"
+        />
       </form>
-    </>
+    </div>
   );
 };
 
